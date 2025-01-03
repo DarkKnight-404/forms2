@@ -1,28 +1,15 @@
+import { useState } from "react";
 import Lable1 from "../Lable1"
 
-export default function ({children}) {
+export default function ({ children }) {
 
-    function addRow(id,lim) {
-        // Select the tbody element inside the table
-        const tableBody = document.querySelector(id);
+    const [dataCount, setDataCount] = useState(2);
 
-        // Create a new row as a string
-        // <td><input class="generic-data-input" type="text"></td>
-        //     <td><input class="generic-data-input" type="text"></td>
-        //     <td><input class="generic-data-input" type="text"></td>
-        //     <td><input class="generic-data-input" type="text"></td>
-        //     <td><input class="generic-data-input" type="text"></td>
-        // </tr>
-        let newRow = `
-        <tr>`
-        for(let i=0;i<lim;i++){
-            newRow+='<td><input class="generic-data-input" type="text"></td>';
-        }    
-        newRow+='</td>'
-        ;
 
-        // Insert the new row at the end of the table
-        tableBody.insertAdjacentHTML('beforeend', newRow);
+    function addRow() {
+        setDataCount((prev) => {
+            return prev + 1;
+        });
     }
 
 
@@ -52,27 +39,31 @@ export default function ({children}) {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <input className="generic-data-input" type="text" />
-                                    </td>
-                                    <td>
-                                        <input className="generic-data-input" type="text" />
-                                    </td>
-                                    <td>
-                                        <input className="generic-data-input" type="text" />
-                                    </td>
-                                    <td>
-                                        <input className="generic-data-input" type="text" />
-                                    </td>
-                                </tr>
+                                {Array.from({ length: dataCount }, () => {
+                                    return <>
+                                        <tr>
+                                            <td>
+                                                <input className="generic-data-input" type="text" />
+                                            </td>
+                                            <td>
+                                                <input className="generic-data-input" type="text" />
+                                            </td>
+                                            <td>
+                                                <input className="generic-data-input" type="text" />
+                                            </td>
+                                            <td>
+                                                <input className="generic-data-input" type="text" />
+                                            </td>
+                                        </tr>
+                                    </>
+                                })}
                             </tbody>
                         </table>
                     </div>
                     <div className="add_btn">
                         <button
                             type="button"
-                            onclick={() => { addRow('#tbl_2 .content-table', 4) }}
+                            onClick={() => { addRow() }}
                             style={{
                                 width: 30,
                                 height: 30,

@@ -1,32 +1,9 @@
 export default function () {
 
-    function addRow(id,lim) {
-        // Select the tbody element inside the table
-        const tableBody = document.querySelector(id);
 
-        // Create a new row as a string
-        // <td><input class="generic-data-input" type="text"></td>
-        //     <td><input class="generic-data-input" type="text"></td>
-        //     <td><input class="generic-data-input" type="text"></td>
-        //     <td><input class="generic-data-input" type="text"></td>
-        //     <td><input class="generic-data-input" type="text"></td>
-        // </tr>
-        let newRow = `
-        <tr>`
-        for(let i=0;i<lim;i++){
-            newRow+='<td><input class="generic-data-input" type="text"></td>';
-        }    
-        newRow+='</td>'
-        ;
-
-        // Insert the new row at the end of the table
-        tableBody.insertAdjacentHTML('beforeend', newRow);
-    }
-
-
-
+    
     return <>
-        <div style={{ width: "600px", textAlign: "center", height: 20 }}>
+        <div style={{ width: "100%", textAlign: "center", height: 20 }}>
             <div className="section-1-title" style={{ margin: 10 }}>
                 Personal Data
             </div>
