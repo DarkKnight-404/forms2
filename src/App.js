@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import FormOne from './Pages/FormOne';
 import FormTwo from './Pages/FormTwo';
 import FormThree from './Pages/FormThree';
+import FormJobDes from './Pages/FormJobDes';
+import './css/jobdesc.css'
 
 
 function Llinks() {
@@ -17,6 +19,8 @@ function Llinks() {
       <Link to='/form_two'>form two</Link>
       <br/>
       <Link to='/form_three'>form three</Link>
+      <br/>
+      <Link to='/form_jobdesc'>form Job Description</Link>
       <br/>
     </div>
   </>
@@ -40,6 +44,7 @@ function App() {
           <Route path="/form_one" element={<FormOne />} />
           <Route path="/form_two" element={<FormTwo />} />
           <Route path="/form_three" element={<FormThree />} />
+          <Route path="/form_jobdesc" element={<FormJobDes />} />
 
           {/* </Route> */}
         </Routes>

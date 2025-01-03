@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 18px;
+    font: 14px "Lato", Arial, sans-serif;
+    min-height: 100vh;
+    color: #666;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+.generic-data-input {
+    background-color: transparent;
+    border: 0;
+    display: block;
+    float: left;
+    font-size: 1em;
+
+
+    border-bottom: 1px solid gray;
+    /* color: teal; */
+    padding: 3px 3px 3px 0px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 5%;
+    /* width: 100%; */
+
+
+
+    &:focus {
+        /* color: scale-color(teal, lightness -25%); */
+        outline: 0;
+        border-bottom: 3px solid #3399ff;
+    }
+
+
+
+}
+
+
+
+.label {
+    margin-left: 0px;
+}
+
+.section-1 {
+    width: 100vw;
+    min-width: 300px;
+    max-width: 400px;
+    /* background-color: green; */
+    margin: auto;
+    margin: auto;
+    padding-bottom: 50px;
+    margin-bottom: 50px
+}
+
+.form-group {
+    width: 100%;
+    height: 70px;
+    margin-top: 15px;
+}
+
+.generic-data-input {
+    width: 90%;
+    margin-left: 5%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid;
+}
+
+label {
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 10px;
+    height: 100px;
+    /* background-color: aqua; */
+
+}
+
+.table-form-1 {
+    margin-top: 5px;
+    /* background-color: yellow; */
+    overflow-x: auto;
+    padding-bottom: 30px
+}
+
+
+@media screen and (min-width: 600px) {
+    /* .form-group {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-right: 10px;
+            } */
+
+    /* .form-group label {
+                width: 40%;
+                height: 40px;
+                font-size: 16px;
+            } */
+
+    .section-1 {
+        width: 800px;
+        min-width: 500px;
+        max-width: 900px;
+        /* background-color: green; */
+        margin: auto;
+
+
+    }
+
+    /* .generic-data-input {
+                width: 50%;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid;
+                float: right;
+                margin-right: 20px;
+            } */
+
+
+
+
+
+
+
+
+}
+
+* {
+    font-family: sans-serif;
+    /* Change your font family */
+}
+
+.content-table {
+    border-collapse: collapse;
+    /* margin: 25px 0; */
+    margin: auto;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.select_optns {
+    width: 100px;
+    border: 0px;
+    background-color: transparent;
+}
+
+.select_optns:focus {
+    width: 100px;
+    border: 0px;
+    background-color: transparent;
+}
+
+.form_jobdesc_label {
+    width: 100px;
+    color: #ffffff;
+    background-color: #009879;
+    font-weight: bold;
+}
+
+.form_jobdesc_input {
+    max-width: none;
+    width: 30ch;
+
+}
+
+.TextAreaOne:focus {
+    border-bottom: 3px solid #3399ff;
+    border-top: 0px;
+}
+
+.select_optns_JobDesc {
+    width: 25ch;
+}
+
+.select_optns_JobDesc:focus {
+    width: 25ch;
+}
